@@ -11,10 +11,6 @@ let messageShow = function (message) {
     document.querySelector('.message').textContent = message;        
 }
 
-// set score 
-let setScore = function (scores) {
-    document.querySelector('#score').textContent = scores;
-}
 
 // Check button
 document.querySelector('.btn-check').addEventListener('click', function(){
@@ -42,12 +38,12 @@ document.querySelector('.btn-check').addEventListener('click', function(){
     // Guess isn't secret key
     else if(guess !== secretNumber) {
         if(score > 1){
-            guess > secretNumber ? messageShow('📈 Too High!') : messageShow('📉 Too Low!');
-            setScore(--score);
+            messageShow(guess > secretNumber ? '📈 Too High!' : '📉 Too Low!');
+            document.querySelector('#score').textContent = --score;
         }
         else {
             messageShow('💥 You lost the game');
-            setScore(0);
+            document.querySelector('#score').textContent = 0;
         }
     }
 
@@ -56,9 +52,10 @@ document.querySelector('.btn-check').addEventListener('click', function(){
 
 // Replay Button
 document.querySelector('#again').addEventListener('click', function(){
+    score = 20;
     document.querySelector('body').classList.remove('background-changer');
     messageShow('Start guessing...');
-    setScore(20);
+    document.querySelector('#score').textContent = 20;
     document.querySelector('.mark-inner').textContent = '?';
     document.querySelector('.mark-inner').style.width = '200px';
     document.querySelector('#input').value = '';
