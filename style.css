@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Press Start 2P";
+    background-color: #222;
+    color: #fff;
+    max-width: 100vw;
+    max-height: 100vh;
+    font-size: 62.5%;
+}
+
+.container { width: 100vw; }
+
+.topOne {
+    margin: 1rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+}
+
+.sign-text {margin-right: 20px;}
+
+button {
+    cursor: pointer;
+    background-color: #fff;
+    font-size: 1.5rem;
+    padding: .9rem 2rem;
+    font-family: inherit;
+    border: none;
+    outline: blue;   
+}
+
+.middleOne {
+    margin: 2rem 0;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+h1 { font-size: 2.5rem; }
+
+.mark {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    position: relative;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+.line {
+    position: relative;
+    z-index: -1 ;
+    background-color:#fff;
+    height: 5px;
+    margin-top: 3rem;
+    width: 100%;
+}
+
+.mark-inner {
+    position: absolute;
+    width: 150px;
+    z-index: 10;
+    text-align: center;
+    background: #fff;
+    color: #000;
+    margin-top: 3rem;
+    padding: 0.8rem 0;
+}
+
+.bottomOne {
+    display: flex;
+    padding: 2% 3%;
+    
+}
+
+.leftOne {
+    flex: 1;
+    padding: 3% 3%;
+    text-align: center;
+}
+
+.rightOne {
+    flex: 1;
+    padding: 3% 3%;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    font-size: 1.8rem;
+}
+
+.leftOne > input {
+    background: none;
+    margin-bottom: 2rem;
+    border: 4px solid #eee;
+    color: #fff;
+    border-radius: 1px solid white;
+    outline: oldlace;
+    font-size: 4rem;
+    width: 15rem;
+    padding: 2rem;
+    font-weight: bold;
+    text-align: center;
+    font-family: inherit;
+
+}
+
+.rightOne > p {
+    margin-bottom: 1rem;
+}
+
+.background-changer {
+    background-color: #60b347;
+}
+
+@media screen and (max-height: 500px){
+    h1 {
+        font-size: 1.5rem;
+    }
+    .leftOne > input {
+        margin-bottom: 1rem;
+        padding: 0.8rem 0.4rem;
+        font-size: 1.3rem;
+        width: 10rem;
+    }
+    button {
+        font-size: 1rem;
+        padding: 0.4rem;
+        border-radius:5px;
+        text-align: center;
+    }
+    .sign-text {
+        font-size: 0.7rem;
+    }
+    .rightOne > p {
+        font-size: .8rem;
+        margin-bottom: .8rem;
+    }
+}
